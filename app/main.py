@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from app.routes import router
 from app.middleware import MetricsMiddleware
 
+
 app = FastAPI(
     title="Mini URL Shortener",
 )

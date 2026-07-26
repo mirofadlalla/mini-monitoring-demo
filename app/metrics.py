@@ -2,9 +2,9 @@ from prometheus_client import Counter, Gauge, Histogram
 
 # إجمالى عدد الـ Requests
 REQUEST_COUNT = Counter(
-    "request_count_total",
-    "Total number of requests",
-    ["method", "endpoint", "http_status"]
+    "http_requests_total",
+    "Total HTTP Requests",
+    ["method", "endpoint", "status"],
 )
 
 
