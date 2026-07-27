@@ -1,0 +1,43 @@
+apiVersion: 1
+
+providers:
+  - name: default
+
+    folder: ""
+
+    type: file
+
+    disableDeletion: false
+
+    editable: true
+
+    options:
+      path: /var/lib/grafana/dashboards
+
+# يعنى إيه Provider؟
+
+# Grafana بتقول:
+# هاتلى الـ Dashboards منين؟
+# الإجابة هنا:
+# /var/lib/grafana/dashboards
+# كل JSON جوه الفولدر ده
+# يتحول Dashboard.
+
+
+# # الغرض: يقول لـ Grafana منين يجيب الـ dashboards الجاهزة (ملفات JSON).
+
+# apiVersion: 1 → نفس فكرة الـ schema version.
+
+# providers: → قائمة بالـ sources اللي هتجيب منها الـ dashboards.
+
+# name: default → اسم الـ provider.
+
+# folder: "" → يخزن الـ dashboards في الـ root folder داخل Grafana.
+
+# type: file → يعني الـ dashboards هتيجي من ملفات JSON.
+
+# disableDeletion: false → يسمح بحذف الـ dashboards من الـ UI.
+
+# editable: true → يسمح بتعديل الـ dashboards من الـ UI.
+
+# options.path: /var/lib/grafana/dashboards → المكان اللي Grafana هيقرأ منه ملفات الـ dashboards.

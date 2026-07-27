@@ -1,0 +1,13 @@
+apiVersion: 1 # نسخة الـ Provisioning Schema.
+
+datasources:
+  - name: Prometheus # الاسم اللى هيظهر فى Grafana.
+    uid: prometheus # بدل ما الـ Dashboard تعتمد على اسم الـ Data Source، تقدر تعتمد على UID ثابت.لو غيرت الاسم الداشبورد مش هتبوظ لان ليها اي دي ثابت 
+    type: prometheus #  نوع الـ Data Source.
+    access: proxy # Browser => Grafana Backend => Prometheus
+    url: http://prometheus:9090
+    isDefault: true
+    editable: false # يعنى المستخدم ميعدلش الـ Data Source من الـ UI.
+
+
+# الغرض: يعرف لـ Grafana منين يجيب البيانات (Prometheus, MySQL, Elasticsearch… إلخ).
